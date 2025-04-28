@@ -1,0 +1,35 @@
+# Embedding Python-based AI Agents into Java Applications version 1.0.
+#
+# Copyright (c)  2024,  Oracle and/or its affiliates.
+# Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
+server:
+  port: 8080
+  host: 0.0.0.0
+
+metrics:
+  rest-request:
+    enabled: false
+app:
+  application-platform-executor:
+    thread-name-prefix: "langgraph-platform-executor-"
+    core-pool-size: 1
+    max-pool-size: 2
+    queue-capacity: 10
+  application-virtual-executor:
+    thread-name-prefix: "langgraph-virtual-executor-"
+    virtual-threads: true
+  vault:
+    vault-ocid: "${Your OCI vault OCID}"
+    compartment-ocid: "${Your OCI vault Compartment OCID}"
+    secret-ocid: "${Your OCI vault Secret OCID}"
+    config-profile: "DEFAULT"
+
+model_id: "cohere.command-r-plus"
+service_endpoint : "https://inference.generativeai.us-chicago-1.oci.oraclecloud.com"
+compartment_id: "${Your OCI GEN AI Compartment OCID}"
+temperature : 0
+max_tokens : 500
+seed : 42
+
+hcm_host : "${Your HCM Host REST API endpoint}"
+hcm_username : "${Your HCM REST API username}"
