@@ -21,7 +21,7 @@ https://oss.oracle.com/licenses/upl.
         <graalpy.version>24.1.0</graalpy.version>
         <graalpy.edition>python</graalpy.edition>
         <native-maven-plugin.version>0.9.28</native-maven-plugin.version>
-        <org.json.version>20240303</org.json.version>
+        <org.json.version>20260719</org.json.version>
         <maven.compiler.target>21</maven.compiler.target>
         <maven.compiler.source>21</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
